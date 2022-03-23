@@ -10,6 +10,7 @@ public class Main {
 //        playerIki.infoPrint(playerIki);
 //        System.out.println(Player.id);
 
+
         Course mat = new Course("matematik", "MAT-101", 70);
         Course fzk = new Course("fizik", "FZK-101", 20);
         Course kmy = new Course("kimya", "KMY-101", 100);
