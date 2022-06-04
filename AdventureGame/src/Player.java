@@ -8,10 +8,12 @@ public class Player {
     private String name;
     private String charName;
     private Scanner inp = new Scanner(System.in);
+    private Inventory inventory;
 
     //sadece disaridan alinacak metot constructur fonksiyona yaziliyor
     public Player(String name){
         this.name = name;
+        this.inventory = new Inventory();
     }
 
     public void selectChar(){
@@ -42,6 +44,8 @@ public class Player {
         System.out.println("Karakter olarak " + this.getCharName() + " secildi");
     }
 
+
+
     public void initPlayer(GameChar gameChar){
 
         this.setDamage(gameChar.getDamage());
@@ -51,8 +55,15 @@ public class Player {
         //this.setName(gameChar.getName()); ?????
 
     }
+
+    public void printInfo(){
+    System.out.println("\tyour gun: " + this.getInventory().getWeapon().getName() +
+            "\tDamage: " + this.getDamage() +
+            "\tHealth: " + this.getHealth() +
+            "\tMoney: " + this.getMoney());
+    }
     public int getDamage() {
-        return damage;
+        return damage + this.getInventory().getWeapon().getDamage();
     }
 
     public void setDamage(int damage) {
@@ -91,5 +102,11 @@ public class Player {
         this.charName = charName;
     }
 
+    public Inventory getInventory() {
+        return inventory;
+    }
 
+    public void setInventory(Inventory inventory) {
+        this.inventory = inventory;
+    }
 }
