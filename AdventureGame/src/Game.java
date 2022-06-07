@@ -25,6 +25,7 @@ public class Game {
             switch (selectLoc){
                 case 0:
                     location = null;
+                    break;
                 case 1:
                     location = new SafeHouse(player);
                     break;
