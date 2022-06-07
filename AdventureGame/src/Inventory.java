@@ -1,10 +1,11 @@
 public class Inventory {
     private Weapon weapon;
+    private Armor armor;
 
 
     public Inventory() {
-        this.weapon = new Weapon("punch", 0, 8, 0);
-
+        this.weapon = new Weapon("punch", -1, 8, 0);
+        this.armor = new Armor(-1, "hand", 1, 0);
     }
 
     public Weapon getWeapon() {
@@ -13,5 +14,13 @@ public class Inventory {
 
     public void setWeapon(Weapon weapon) {
         this.weapon = weapon;
+    }
+
+    public Armor getArmor() {
+        return armor;
+    }
+
+    public void setArmor(Armor armor) {
+        this.armor = armor;
     }
 }
