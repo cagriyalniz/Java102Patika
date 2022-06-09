@@ -19,6 +19,9 @@ public class Game {
             System.out.println("Location: ");
             System.out.println("1- Safe House ");
             System.out.println("2- Store ");
+            System.out.println("3- Cave: You will find water ");
+            System.out.println("4- Forrest: You will find fruit & meat ");
+            System.out.println("5- Caste: You will find wine ");
             System.out.println("0- End of Game ");
             System.out.println("Choose location! ");
             int selectLoc = input.nextInt();
@@ -31,6 +34,15 @@ public class Game {
                     break;
                 case 2:
                     location = new ToolStore(player);
+                    break;
+                case 3:
+                    location = new Cave(player);
+                    break;
+                case 4:
+                    location = new Forrest(player);
+                    break;
+                case 5:
+                    location = new Castle(player);
                     break;
                 default:
                     location = new SafeHouse(player);
