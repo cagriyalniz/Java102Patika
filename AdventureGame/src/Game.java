@@ -10,6 +10,7 @@ public class Game {
 
         Player player = new Player(playerName);
         System.out.println("Adventure is starting for " +player.getName());
+
         System.out.println("choose your warrior ID: ");
         player.selectChar();
         Location location = null;
