@@ -4,6 +4,7 @@ public class Player {
     //bu özellikler private tanımlanıp dışarıdan erişim engellenerek encapsulate yapılıyor
     private int damage;
     private int health;
+    private int originalHealt;
     private int money;
     private String name;
     private String charName;
@@ -52,6 +53,7 @@ public class Player {
         this.setHealth(gameChar.getHealth());
         this.setMoney(gameChar.getMoney());
         this.setCharName(gameChar.getName());
+        this.setOriginalHealt(gameChar.getHealth());
         //this.setName(gameChar.getName()); ?????
 
     }
@@ -117,5 +119,13 @@ public class Player {
 
     public void setInventory(Inventory inventory) {
         this.inventory = inventory;
+    }
+
+    public int getOriginalHealt() {
+        return originalHealt;
+    }
+
+    public void setOriginalHealt(int originalHealt) {
+        this.originalHealt = originalHealt;
     }
 }
