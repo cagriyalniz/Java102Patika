@@ -52,5 +52,8 @@ public class Main {
         Print.printArray(x);
         Print.printArray(y);
         Print.printArray(z);
+
+        Student<Integer> stuA = new Student<>();
+        stuA.insert(123);
     }
 }
