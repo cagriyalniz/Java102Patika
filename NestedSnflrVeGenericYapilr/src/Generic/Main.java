@@ -32,5 +32,25 @@ public class Main {
         String text2 = "yalnizcagri";
         wow.setObj2(text2);
         wow.showInfo();
+
+        String[] x= {"cagri", "java", "102"};
+        Integer[] y = {1, 2, 3, 4};
+        Character[] z = {'j', 'a', 'v', 'a'};
+
+        for(String i : x){
+            System.out.println(i);
+        }
+
+        for(Integer i : y){
+            System.out.println(i);
+        }
+
+        for(Character i: z){
+            System.out.println(i);
+        }
+
+        Print.printArray(x);
+        Print.printArray(y);
+        Print.printArray(z);
     }
 }
