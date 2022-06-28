@@ -55,5 +55,11 @@ public class Main {
 
         Student<Integer> stuA = new Student<>();
         stuA.insert(123);
+
+
+        GenericBounded<Integer> n1 = new GenericBounded<>(42);
+        n1.run();
+        GenericBounded<Long> longNumber = new GenericBounded<>(null);
+        n2.run();
     }
 }
